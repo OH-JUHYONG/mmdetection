@@ -2,7 +2,7 @@ import json
 import matplotlib.pyplot as plt
 
 # JSON 파일 경로
-json_file_path = '/home/ohanthony/mmdetection/work_dirs/mask-rcnn_r50_fpn_ms-poly-3x_coco/20231108_084508/vis_data/scalars.json'
+json_file_path = '/home/ohanthony/mmdetection/work_dirs/mask-rcnn_r50_fpn_1x_asan/1117_2/vis_data/scalars.json'
 
 # bbox mAP 및 segm mAP 데이터를 저장할 리스트들
 bbox_map_values = {'mAP': [], 'mAP_50': [],
@@ -34,7 +34,7 @@ plt.ylabel('mAP')
 plt.legend()
 # bbox mAP 그래프 저장
 plt.savefig(
-    '/home/ohanthony/mmdetection/outputs/show_train_loss/1108_bbox_mAP.png')
+    '/home/ohanthony/mmdetection/mmd_output/mmd_1117_v2/plot/mmd_1117_bbox_mAP.png')
 plt.show()
 
 # segm mAP 그래프 그리기
@@ -47,5 +47,5 @@ plt.ylabel('mAP')
 plt.legend()
 # segm mAP 그래프 저장
 plt.savefig(
-    '/home/ohanthony/mmdetection/outputs/show_train_loss/1108_seg_mAP.png')
+    '/home/ohanthony/mmdetection/mmd_output/mmd_1117_v2/plot/mmd_1117_seg_mAP.png')
 plt.show()

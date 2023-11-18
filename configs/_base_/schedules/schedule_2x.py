@@ -10,7 +10,6 @@ test_cfg = dict(type='TestLoop')
 # by_epoch = False --> 선형적인 증가가 iteration 기반을 의미
 # MultiStepLR: milestones에 지정된 epoch에서 학습률을 원래 학습률의 gamma 비율로 감소시킴
 param_scheduler = [
-param_scheduler = [
     dict(
         type='LinearLR', start_factor=0.001, by_epoch=False, begin=0, end=500),
     dict(
