@@ -85,7 +85,7 @@ def find_tif_file(directory, tif_file_name):
 source_dir = "D:\\1. Development\\project\\asan"  # 원본 디렉토리 경로
 target_dir = "D:\\1. Development\\project\\asan_split"  # 복사할 파일을 저장할 새로운 디렉토리 경로
 
-# 비율 설정
+# split 비율 설정
 copy_ratio = 1
 train_ratio = 0.9
 val_ratio = 0.05
