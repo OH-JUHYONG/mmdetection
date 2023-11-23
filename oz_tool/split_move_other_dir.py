@@ -35,7 +35,7 @@ src_annotations = "/home/ohanthony/datasets/asan/annfiles/test/"
 src_images = "/home/ohanthony/datasets/asan/images/test/"
 dst_annotations = "/home/ohanthony/datasets/asan/annfiles/train/"
 dst_images = "/home/ohanthony/datasets/asan/images/train/"
-num_to_keep = 10  # src 디렉토리에 남길 파일 수
+num_to_keep = 10  # src 디렉토리에 남길 파일 수 설정
 
 # 실행
 move_files_except_random(src_annotations, src_images,
