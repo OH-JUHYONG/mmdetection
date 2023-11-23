@@ -86,5 +86,5 @@ def process_image_and_json(source_dir, output_dir, target_size):
 # 사용 예시
 source_dir = 'D:\\1. Development\\project\\asan_split'
 output_dir = 'C:\\Users\\ohanthony\\Desktop\\Data\\asan_resize'
-target_size = (793, 793)
+target_size = (793, 793)  # resize 이미지 크기 지정
 process_image_and_json(source_dir, output_dir, target_size)
