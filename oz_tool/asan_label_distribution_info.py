@@ -64,7 +64,7 @@ def main():
             out_file.write(f'"{dataset_type} 이미지 label 분포"\n')
             for class_id, count in distribution.items():
                 percentage = calculate_percentage(count, total)
-                label = class_id_labels.get(class_id, '알 수 없음')
+                label = class_id_labels.get(class_id, '알 수 없음!!')
                 out_file.write(
                     f"{class_id} ({label}): {count}개 [{percentage:.2f}%]\n")
             out_file.write("\n")
