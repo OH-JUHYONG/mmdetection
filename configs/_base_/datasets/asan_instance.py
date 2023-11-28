@@ -1,6 +1,6 @@
 # dataset settings
 dataset_type = 'AsanDataset'
-data_root = '/home/ohanthony/mmdetection/data/asan/'
+data_root = '/home/ohanthony/datasets/asan/'
 
 # Example to use different file client
 # Method 1: simply set the data root and let the file I/O module
@@ -44,7 +44,7 @@ train_dataloader = dict(
         type=dataset_type,
         data_root=data_root,
         ann_file='annotations/train.json',
-        data_prefix=dict(img='train/'),
+        data_prefix=dict(img=data_root + '/images/train/'),
         filter_cfg=dict(filter_empty_gt=True, min_size=32),
         pipeline=train_pipeline,
         backend_args=backend_args))
@@ -58,11 +58,11 @@ val_dataloader = dict(
         type=dataset_type,
         data_root=data_root,
         ann_file='annotations/val.json',
-        data_prefix=dict(img='val/'),
+        data_prefix=dict(img=data_root + '/images/val/'),
         test_mode=True,
         pipeline=test_pipeline,
         backend_args=backend_args))
-test_dataloader = val_dataloader
+# test_dataloader = val_dataloader
 
 val_evaluator = dict(
     type='CocoMetric',
@@ -70,7 +70,7 @@ val_evaluator = dict(
     metric=['bbox', 'segm'],
     format_only=False,
     backend_args=backend_args)
-test_evaluator = val_evaluator
+# test_evaluator = val_evaluator
 
 # inference on test dataset and
 # format the output results for submission.
@@ -84,7 +84,7 @@ test_dataloader = dict(
         type=dataset_type,
         data_root=data_root,
         ann_file=data_root + 'annotations/test.json',
-        data_prefix=dict(img='test/'),
+        data_prefix=dict(img=data_root + '/images/test/'),
         test_mode=True,
         pipeline=test_pipeline))
 test_evaluator = dict(

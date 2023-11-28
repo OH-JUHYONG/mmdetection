@@ -12,7 +12,7 @@ from .base_det_dataset import BaseDetDataset
 
 @DATASETS.register_module()
 class AsanDataset(BaseDetDataset):
-    """Dataset for COCO."""
+    """Dataset for Asan."""
 
     METAINFO = {
         'classes':

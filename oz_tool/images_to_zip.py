@@ -2,7 +2,7 @@ import os
 import zipfile
 
 # 경로 설정
-path = "C:\\Users\\ohanthony\\Desktop\\1차 시흥"
+path = "C:\\Users\\ohanthony\\Desktop\\Capstone Design 2023-2\\Data\\1차 시흥"
 
 # 지정된 경로에서 .tif 확장자를 가진 파일들만 추출
 tif_files = [f for f in os.listdir(path) if f.endswith('.tif')]
